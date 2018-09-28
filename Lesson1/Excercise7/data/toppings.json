@@ -1,0 +1,99 @@
+{"toppings": [
+    {
+      "name": "tomato sauce",
+      "code": "TOM",
+      "default": true,
+      "price": 5
+    },
+    {
+      "name": "white sauce",
+      "code": "WHI",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "hot sauce",
+      "code": "HOT",
+      "default": false,
+      "price": 3
+    },
+    {
+      "name": "potato slices",
+      "code": "POT",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "tomato slices",
+      "code": "TOS",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "mozz",
+      "code": "MOZ",
+      "default": true,
+      "price": 5
+    },
+    {
+      "name": "olives",
+      "code": "OLI",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "mushrooms",
+      "code": "MUS",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "fried tofu",
+      "code": "TOF",
+      "default": false,
+      "price": 10
+    },
+    {
+      "name": "spicy sausage",
+      "code": "SAU",
+      "default": false,
+      "price": 10
+    },
+    {
+      "name": "onion",
+      "code": "ONI",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "jalapeno",
+      "code": "JAL",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "peanut butter",
+      "code": "PEA",
+      "default": false,
+      "price": 8
+    },
+    {
+      "name": "banana",
+      "code": "BAN",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "chocolate sauce",
+      "code": "CHO",
+      "default": false,
+      "price": 5
+    },
+    {
+      "name": "marshmallows",
+      "code": "MAR",
+      "default": false,
+      "price": 5
+    }
+  ]
+}

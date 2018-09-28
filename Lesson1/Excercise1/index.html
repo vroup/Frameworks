@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TodoList App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-8">
+
+            <h4 class="display-4">TODO List App</h4>
+            <br/>
+            <div class="card">
+                <div class="card-header">
+                    The list
+                </div>
+                <div class="card-body">
+                    <ol class="list-group" id="itemList">
+                        <!-- The following list items will be replaced by the server. -->
+                        <li class="list-group-item">
+                            <input type="checkbox" class="todoCheckbox" id="todo1">
+                            <label for="todo1">Do laundry</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="todoCheckbox" type="checkbox" id="todo2">
+                            <label for="todo2">Clean bedroom</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="checkbox" class="todoCheckbox" id="todo3">
+                            <label for="todo3">Bake cake</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="checkbox" class="todoCheckbox" id="todo4">
+                            <label for="todo4">Pick up groceries</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="checkbox" class="todoCheckbox" id="todo5">
+                            <label for="todo5">Post letter</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="checkbox" class="todoCheckbox" id="todo6">
+                            <label for="todo5">Take out the trash</label>
+                            <input type="button" value="close" class="close-btn"/>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <br/>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="itemText">New Item</label>
+                            <input type="text" class="form-control" id="itemText" placeholder="Fetch kids from school">
+                            <small class="form-text text-muted">Write something for your TODO list.</small>
+                        </div>
+                        <button type="submit" id="submitItemBtn" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <br/>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="itemText">Reorder</label>
+                            <small class="form-text text-muted">Move stuff around.</small>
+                        </div>
+                        <button type="submit" id="reorderTasksBtn" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <br/>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="itemText">Clear finished tasks</label>
+                            <small class="form-text text-muted">Clear finished tasks.</small>
+                        </div>
+                        <button type="submit" id="clearFinishedTasks" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

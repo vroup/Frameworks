@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm-8">
+
+      <h4 class="display-4">TODO List App</h4>
+      <br/>
+      <div class="card">
+        <div class="card-header">
+          The list
+        </div>
+        <div class="card-body">
+          <ol class="list-group" id="itemList">
+            <li class="list-group-item"
+                *ngFor="let task of tasks; index as i"
+                app-task [text]="task.text" [done]="task.done" [i]="i">
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <br/>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="itemText">New Item</label>
+              <input type="text" class="form-control" id="itemText" placeholder="Fetch kids from school">
+              <small class="form-text text-muted">Write something for your TODO list.</small>
+            </div>
+            <button type="submit" id="submitItemBtn" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <br/>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="itemText">Reorder</label>
+              <small class="form-text text-muted">Move stuff around.</small>
+            </div>
+            <button type="submit" id="reorderTasksBtn" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <br/>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="itemText">Clear finished tasks</label>
+              <small class="form-text text-muted">Clear finished tasks.</small>
+            </div>
+            <button type="submit" id="clearFinishedTasks" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm"></div>
+  </div>
+</div>

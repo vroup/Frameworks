@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#x1F355; Porco Rosso</title>
+    <meta name="description" content="Ristorante Pizzeria"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/script.js"></script>
+
+</head>
+<body>
+<header class="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bd-navbar">
+    <div class="navbar-brand">
+        <h1>&#x1F355; Porco Rosso</h1>
+        <p class="float-right">&ndash; Since 2018</p>
+    </div>
+
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link">Our values</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Get in touch</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Build your own</a></li>
+    </ul>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <main class="col-12 bd-content">
+            <h1 class="bd-title">Build your own pizza</h1>
+            <p class="bd-lead">At porco Rosso we let you choose between dozens of quality ingredients to make your dream
+                pizza come true.</p>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        Choose your favorite toppings and more&hellip;
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        Please move the slider to select your pizza size:
+                        <input class="form-control-inline" type="range" step="5" value="30"
+                               min="20" aria-valuemin="smallest pizza diameter"
+                               max="50" aria-valuemax="largest pizza diameter" id="pizza-diameter"/>
+                        &#8960; <span id="pizza-size">-1</span> cm
+                    </div>
+
+
+                    <div class="form-group">
+                        <p class="card-text">Your pizza:</p>
+                        <div class="jumbotron" id="added-toppings">
+                            <span class="badge badge-primary">our delicious sourdough crust</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="card-text">Available toppings:</p>
+                        <div class="jumbotron" id="available-toppings"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-primary btn-lg" type="submit" value="Check out" id="check-out-btn"/>
+                        <!--<input class="btn btn-lg" type="button" value="Start over" id="reset-btn" />-->
+
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">We love pizza!</footer>
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>

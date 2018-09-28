@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <i class="fas fa-chevron-circle-down"></i>
+  <h3 class="h3">{{title}}</h3>
+  <table class="table">
+    <caption>Terms and conditions apply.</caption>
+    <thead>
+    <tr>
+      <th>Score</th>
+      <th>Player</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let highScore of highScores; index as i">
+      <td>{{highScore.score}}</td>
+      <td>{{highScore.player}}
+        <span class="float-right" (click)="removeScore(i)">&times;</span></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="form-group row">
+    <div class="col-6">
+      <input type="text" class="form-control"
+             placeholder="score" [(ngModel)]="score">
+    </div>
+    <div class="col-6">
+      <input type="text" class="form-control"
+             placeholder="player" [(ngModel)]="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <input (click)="addScore()"
+           value="Add new"
+           class="btn btn-lg btn-primary"
+           type="button">
+  </div>
+
+</div>
+
