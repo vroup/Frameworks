@@ -3,9 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TasksService {
 
-  tasks = [
+  tasks: ITask[] = [
     {'id': 0, 'text': 'Bake a cake', 'done': true},
     {'id': 1, 'text': 'Call grandmother', 'done': true},
     {'id': 2, 'text': 'Pick up children', 'done': false},
@@ -19,4 +20,10 @@ export class TasksService {
   unfinishedTasks = this.tasks.filter(p => !p.done);
 
   constructor() { }
+}
+
+export interface ITask {
+  text: string;
+  done: boolean;
+  id: number;
 }

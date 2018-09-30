@@ -3,6 +3,11 @@
     <div class="col-sm"></div>
     <div class="col-sm-8">
 
+      <p *ngFor="let task of tasks">
+        {{task|json}}
+      </p>
+
+
       <h4 class="display-4">TODO List App</h4>
       <br/>
       <div class="card">
@@ -12,8 +17,8 @@
         <div class="card-body">
           <ol class="list-group" id="itemList">
             <li class="list-group-item"
-                *ngFor="let task of tasks; index as i"
-                app-task [text]="task.text" [done]="task.done" [i]="i">
+                *ngFor="let task of tasks; index as i">
+              <app-task [task]="task" [i]="i"></app-task>
             </li>
           </ol>
         </div>

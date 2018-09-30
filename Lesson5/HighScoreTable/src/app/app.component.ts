@@ -33,6 +33,6 @@ export class AppComponent {
 
   removeScore(index) {
     this.highScores.splice(index, 1);
-}
+  }
 
 }

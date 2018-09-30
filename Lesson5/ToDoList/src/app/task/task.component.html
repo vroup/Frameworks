@@ -1,3 +1,4 @@
 <label>
-  <input type="checkbox" [checked]="done">
-  {{text}}</label> <span (click)="remove(i)" class="float-right">&times;</span>
+  <input type="checkbox" [(ngModel)]="task.done" (change)="logChange($event)">
+  {{task.text}}</label>
+<span (click)="remove(i)" class="float-right">&times;</span>

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TasksService} from './tasks.service';
+import {ITask} from './tasks.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,11 @@ import {TasksService} from './tasks.service';
 
 export class AppComponent {
   title = 'ToDoList';
-  tasks = [];
+  tasks: ITask[];
 
-  constructor(public tasksService: TasksService) {
+  constructor(private tasksService: TasksService) {
     this.tasks = tasksService.tasks;
   }
 
 }
+
