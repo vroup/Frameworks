@@ -11,9 +11,26 @@ import {ITask} from './tasks.service';
 export class AppComponent {
   title = 'ToDoList';
   tasks: ITask[];
+  deletedTask: ITask;
 
-  constructor(private tasksService: TasksService) {
+  isPending = p => !p.done;
+  isFinished = p => p.done;
+
+  constructor(public tasksService: TasksService) {
     this.tasks = tasksService.tasks;
+    this.deletedTask = tasksService.deletedTask;
+  }
+
+  getDeleted() {
+    return this.tasksService.deletedTask;
+  }
+
+  getPendingTasks() {
+    return this.tasks.filter(this.isPending);
+  }
+
+  getFinishedTasks() {
+    return this.tasks.filter(this.isFinished);
   }
 
 }

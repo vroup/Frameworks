@@ -1,4 +1,3 @@
 <label>
-  <input type="checkbox" [(ngModel)]="task.done" (change)="logChange($event)">
-  {{task.text}}</label>
-<span (click)="remove(i)" class="float-right">&times;</span>
+  <input type="checkbox" [(ngModel)]="task.done"> {{task.text}}</label>
+<span *ngIf="task.done" (click)="removeTask(task.id)" class="float-right">&times;</span>

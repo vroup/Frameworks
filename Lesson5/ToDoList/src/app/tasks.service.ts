@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class TasksService {
 
+  deletedTask: ITask;
   tasks: ITask[] = [
     {'id': 0, 'text': 'Bake a cake', 'done': true},
     {'id': 1, 'text': 'Call grandmother', 'done': true},
@@ -16,10 +17,18 @@ export class TasksService {
     {'id': 6, 'text': 'Take out trash', 'done': false}
   ];
 
-  finishedTasks = this.tasks.filter(p => p.done);
-  unfinishedTasks = this.tasks.filter(p => !p.done);
+  remove(id: number) {
+    const index: number = this.tasks.findIndex(p => p.id === id);
+    if (this.tasks[index].done) {
+      return this.tasks.splice(index, 1)[0];
+    } else {
+      window.alert('Cannot remove task, because it is not done.');
+      return [];
+    }
+  }
 
-  constructor() { }
+  constructor() {
+  }
 }
 
 export interface ITask {
