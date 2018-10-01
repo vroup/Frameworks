@@ -17,13 +17,13 @@ export class TasksService {
     {'id': 6, 'text': 'Take out trash', 'done': false}
   ];
 
-  remove(id: number) {
+  remove(id: number): ITask {
     const index: number = this.tasks.findIndex(p => p.id === id);
     if (this.tasks[index].done) {
       return this.tasks.splice(index, 1)[0];
     } else {
       window.alert('Cannot remove task, because it is not done.');
-      return [];
+      return null;
     }
   }
 
