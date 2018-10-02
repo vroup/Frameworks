@@ -34,7 +34,10 @@
         </div>
       </div>
 
-      <!--<div class="alert alert-danger" *ngIf="deletedTask">Task {{deletedTask.text}} has been deleted. <input value="Undo" type="button" class="btn btn-danger" /> </div>-->
+      <div class="alert alert-danger" *ngIf="deletedTask">Task {{deletedTask.text}} has been deleted.
+        <input value="Undo" type="button" class="btn btn-danger"/>
+        <input value="Dismiss" type="button" class="btn btn-danger">
+      </div>
 
       <div class="card mb-4">
         <div class="card-body">

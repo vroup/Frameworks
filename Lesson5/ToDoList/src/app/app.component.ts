@@ -17,7 +17,9 @@ export class AppComponent {
   isFinished = p => p.done;
 
   constructor(public tasksService: TasksService) {
-    this.tasks = tasksService.tasks;
+    this.tasksService.getTasks()
+      .subscribe(data => this.tasks = data);
+    // this.tasks = tasksService.tasks;
     this.deletedTask = tasksService.deletedTask;
   }
 

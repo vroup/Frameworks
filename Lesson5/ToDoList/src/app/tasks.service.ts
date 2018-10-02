@@ -1,21 +1,18 @@
 import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class TasksService {
-
+  serverUrl = 'http://localhost:3000';
   deletedTask: ITask;
-  tasks: ITask[] = [
-    {'id': 0, 'text': 'Bake a cake', 'done': true},
-    {'id': 1, 'text': 'Call grandmother', 'done': true},
-    {'id': 2, 'text': 'Pick up children', 'done': false},
-    {'id': 3, 'text': 'Recycle glass', 'done': true},
-    {'id': 4, 'text': 'Patch bike', 'done': false},
-    {'id': 5, 'text': 'Pour petrol', 'done': true},
-    {'id': 6, 'text': 'Take out trash', 'done': false}
-  ];
+  tasks: ITask[] = [];
+
+  getTasks() {
+    return this.httpClient.get<ITask[]>(this.serverUrl + '/tasks');
+  }
 
   remove(id: number): ITask {
     const index: number = this.tasks.findIndex(p => p.id === id);
@@ -27,7 +24,8 @@ export class TasksService {
     }
   }
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
+
   }
 }
 
